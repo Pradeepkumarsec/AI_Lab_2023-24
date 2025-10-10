@@ -52,7 +52,7 @@ print("The optimal value is:", minimax(0, 0, True, values, float('-inf'), float(
 
 
 ### Output:
-https://private-user-images.githubusercontent.com/119392695/421210780-16087860-79ce-4574-9b00-e1c58f49d3bc.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTc3NTM2NDUsIm5iZiI6MTc1Nzc1MzM0NSwicGF0aCI6Ii8xMTkzOTI2OTUvNDIxMjEwNzgwLTE2MDg3ODYwLTc5Y2UtNDU3NC05YjAwLWUxYzU4ZjQ5ZDNiYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwOTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDkxM1QwODQ5MDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYmVlOGE2ZGYyMWNjODNiOWVjYjA0NjljYzc2ZmJhMTMyZWY3OGQ4M2E4MmVkODU4MjFmNGEwMDhiMzQyNTg5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.d9PEBKmw4J4ehcAhD3QyT4x57ZPIdynCjCtPLDLMz9M
+<img width="744" height="122" alt="image" src="https://github.com/user-attachments/assets/c817017b-cca0-47b5-aa6e-26af181c6bb9" />
 
 
 ### Result:
