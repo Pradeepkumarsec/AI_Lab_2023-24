@@ -1,6 +1,6 @@
 # Ex.No: 8  Logic Programming –  Medical Diagnosis Expert System
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 10/10/2025                                                                           
+### REGISTER NUMBER : 212222060178
 ### AIM: 
 Write a Prolog program to build a medical Diagnosis Expert System.
 ###  Algorithm:
@@ -15,6 +15,46 @@ Write a Prolog program to build a medical Diagnosis Expert System.
 
 ### Program:
 
+disease(raju, mumps) :-
+    symptom(raju, fever),
+    symptom(raju, swollen_glands).
+
+disease(raju, measles) :-
+    symptom(raju, cough),
+    symptom(raju, sneeze),
+    symptom(raju, running_nose).
+
+disease(raju, common_cold) :-
+    symptom(raju, headache),
+    symptom(raju, sneezing),
+    symptom(raju, sore_throat),
+    symptom(raju, runny_nose),
+    symptom(raju, chills).
+
+disease(raju, fever) :-
+    symptom(raju, bodypain),
+    symptom(raju, cold),
+    symptom(raju, headache),
+    symptom(raju, high_temp).
+
+symptom(raju, headache).
+symptom(raju, sneezing).
+symptom(raju, sore_throat).
+symptom(raju, runny_nose).
+symptom(raju, chills).
+
+diagnose(Patient) :-
+    disease(Patient, Disease),
+    format('~n~w is diagnosed with ~w.~n', [Patient, Disease]),
+    !.
+
+diagnose(Patient) :-
+    format('~nNo disease could be diagnosed for ~w based on current symptoms.~n', [Patient]).
+
+% --- Program Entry ---
+start :-
+    writeln('--- Welcome to the Medical Diagnosis Expert System ---'),
+    diagnose(raju).
 
 
 
@@ -26,6 +66,7 @@ Write a Prolog program to build a medical Diagnosis Expert System.
 
 
 ### Output:
+<img width="799" height="343" alt="image" src="https://github.com/user-attachments/assets/b014896e-aad3-4256-b7c4-f874560f4dd9" />
 
 
 
