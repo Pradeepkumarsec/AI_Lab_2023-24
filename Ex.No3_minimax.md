@@ -1,6 +1,6 @@
 # Ex.No: 3  Implementation of Minimax Search
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 10/10/2025                                                                           
+### REGISTER NUMBER : 212222060178
 ### AIM: 
 Write a mini-max search algorithm to find the optimal value of MAX Player from the given graph.
 ### Algorithm:
@@ -16,6 +16,31 @@ Write a mini-max search algorithm to find the optimal value of MAX Player from t
 
 ### Program:
 
+def minimax(depth, index, is_max, values, alpha, beta):
+    if depth == 3:
+        return values[index]
+
+    func = max if is_max else min
+    best = float('-inf') if is_max else float('inf')
+
+    for i in range(2):
+        val = minimax(depth + 1, index * 2 + i, not is_max, values, alpha, beta)
+        best = func(best, val)
+
+        if is_max:
+            alpha = max(alpha, best)
+        else:
+            beta = min(beta, best)
+
+        if beta <= alpha:
+            break
+
+    return best
+
+
+values = [3, 5, 6, 9, 1, 2, 0, -1]
+print("The optimal value is:", minimax(0, 0, True, values, float('-inf'), float('inf')))
+
 
 
 
@@ -27,7 +52,7 @@ Write a mini-max search algorithm to find the optimal value of MAX Player from t
 
 
 ### Output:
-
+https://private-user-images.githubusercontent.com/119392695/421210780-16087860-79ce-4574-9b00-e1c58f49d3bc.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTc3NTM2NDUsIm5iZiI6MTc1Nzc1MzM0NSwicGF0aCI6Ii8xMTkzOTI2OTUvNDIxMjEwNzgwLTE2MDg3ODYwLTc5Y2UtNDU3NC05YjAwLWUxYzU4ZjQ5ZDNiYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwOTEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDkxM1QwODQ5MDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYmVlOGE2ZGYyMWNjODNiOWVjYjA0NjljYzc2ZmJhMTMyZWY3OGQ4M2E4MmVkODU4MjFmNGEwMDhiMzQyNTg5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.d9PEBKmw4J4ehcAhD3QyT4x57ZPIdynCjCtPLDLMz9M
 
 
 ### Result:
